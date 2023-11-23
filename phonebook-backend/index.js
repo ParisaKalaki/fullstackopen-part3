@@ -40,7 +40,7 @@ app.use(
   )
 );
 app.use(cors());
-// Middleware to parse JSON in the request body
+app.use(express.static("dist"));
 app.use(express.json());
 
 let number = persons.length;
