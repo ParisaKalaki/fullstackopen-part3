@@ -3,17 +3,12 @@ import "dotenv/config";
 
 mongoose.set("strictQuery", false);
 
-console.log("Password:", process.env.PASSWORD);
-
 const url = process.env.MONGODB_URI;
 
 const connectToDatabase = async () => {
   try {
     console.log("connecting to", url);
-    await mongoose.connect(url, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(url, {});
     console.log("connected to MongoDB");
   } catch (error) {
     console.log("error connecting to MongoDB:", error.message);

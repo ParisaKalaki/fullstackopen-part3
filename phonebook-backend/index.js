@@ -38,7 +38,6 @@ app.get("/info", (request, response) => {
 
 app.get("/api/persons", async (request, response) => {
   const persons = await Person.find({});
-  console.log(persons);
   response.json(persons);
 });
 
